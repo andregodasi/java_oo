@@ -47,7 +47,7 @@ public class Lista3exercicio11andre {
         
     }
     public static void somaDiagonalPrincipalESecundaria(int matriz[][]) {
-        int smdp = 0, smds = 0;
+        int smdp = 0, smds = 0,mapeiaDiagonalSecundariaIncrementa = 0,mapeiaDiagonalSecundariaDecrementa = matriz.length -1 ;
         for (int i = 0; i < matriz.length; i++) {
             System.out.printf("%da. linha: ", (i + 1));
             for (int j = 0; j < matriz.length; j++) {
@@ -58,14 +58,17 @@ public class Lista3exercicio11andre {
                     smdp = smdp + matriz[i][j];
                 }
 
-                if ((i + j) == (matriz.length - 1)) // diagonal secundaria
+                if ((i == mapeiaDiagonalSecundariaIncrementa) && (j == mapeiaDiagonalSecundariaDecrementa)) // diagonal secundaria
                 {
                     smds = smds + matriz[i][j];
+                    mapeiaDiagonalSecundariaIncrementa++;
+                    mapeiaDiagonalSecundariaDecrementa--;
                 }
             }
             System.out.printf("\n");
 
         }
-            System.out.println("Soma da diagonal principal e diagonal secundaria "+(smdp+(-smds)));
+        
+            System.out.println("Soma da diagonal principal e diagonal secundaria "+(smdp+(smds)));
     }
 }

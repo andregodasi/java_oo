@@ -25,18 +25,18 @@ public class Lista2exercicio5andre {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int quantidade;
+        double quantidade;
         double valor;
         
         System.out.println("Sistema video locadora");
         Scanner scn = new Scanner(System.in);
         System.out.println("Digite a quantidade de Dvds da video locadora.");
-        quantidade = scn.nextInt();
+        quantidade = scn.nextDouble();
         System.out.println("Digite a o valor do aluguel de cada Dvd.");
         valor = scn.nextDouble();
         
-        System.out.printf("Faturamento anual: R$ %.2f \n", (((quantidade/3)*1.10)*valor*12));
-        System.out.printf("Valor ganho com multa por mês: R$ %.2f \n",((quantidade/3)*0.10)*valor);
+        System.out.printf("Faturamento anual: R$ %.2f \n", (quantidade/3 *valor)*12);
+        System.out.printf("Valor ganho com multa por mês: R$ %.2f \n",((quantidade/3 * 0.10)* (valor * 0.10)));
         
     }
     
