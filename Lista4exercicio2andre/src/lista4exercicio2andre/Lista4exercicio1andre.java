@@ -82,7 +82,7 @@ public class Lista4exercicio1andre {
     public static void main(String[] args) {
         
         Scanner scn = new Scanner(System.in);
-        System.out.println("Cadastre uma pessoa. Digite endereço, idade e nome ");
+        System.out.println("Cadastre uma pessoa. Digite endereço,nome e idade ");
      
         
         
@@ -92,10 +92,19 @@ public class Lista4exercicio1andre {
         p1.setIdade(scn.nextInt());
      
         
-        
+       
         System.out.println("Nome:"+p1.getNome());
         System.out.println("Idade:"+p1.getIdade());
         System.out.println("Endereço:"+p1.getEndereco());
+        
+        p1.fazAniversario();
+        
+        p1.imprime();
+        
+        p1.fazAniversario();
+        p1.fazAniversario();
+        
+        p1.imprime();
     }
     
 }

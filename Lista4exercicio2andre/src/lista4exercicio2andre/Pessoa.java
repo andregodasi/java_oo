@@ -37,4 +37,15 @@ public class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+    
+    public int fazAniversario(){
+        return this.idade += 1;
+    }
+    
+    public void imprime(){
+        System.out.println(this.nome);
+        System.out.println(this.idade);
+        System.out.println(this.endereco);
+        
+    }
 }
