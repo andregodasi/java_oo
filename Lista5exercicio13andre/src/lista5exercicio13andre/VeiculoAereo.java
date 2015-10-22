@@ -13,9 +13,7 @@ public abstract class VeiculoAereo extends Veiculo{
 
     private double velocidadeEmNo;
     
-   @Override
-   public abstract void andar();
-
+  
     public VeiculoAereo(double velocidadeEmNo, String nome) {
         super(nome);
         this.velocidadeEmNo = velocidadeEmNo;
